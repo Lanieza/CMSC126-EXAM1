@@ -1,0 +1,269 @@
+/* ---WHOLE */
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 100px 90%;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    "sidebar-left main comments";
+}
+
+/* ---HEADER */
+header {
+  grid-area: header;
+  background: #cee3f8;
+  border-bottom: 1px solid #5f99cf;
+  display: flex;
+  flex-direction: column;
+}
+.blue-area {
+  height: 60%;
+  background-color: #dcedff;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas: "logo user-menu";
+}
+.gray-area {
+  height: 40%;
+  background-color: #eff0f2;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "left categories others";
+  border-top: 1px solid black;
+}
+
+.category {
+  grid-area: categories;
+  justify-self: start;
+  align-self: end;
+  padding-left: 0.7rem;
+}
+header > .gray-area > .category > a {
+  text-decoration: none;
+  color: #369;
+  font-weight: 700;
+  font-size: 1.5vmin;
+  text-align: center;
+  padding: 0.3rem 0.3rem;
+  background: #eff7ff;
+  border: 1px solid black;
+  border-bottom: 1px solid #5f99cf;
+  border-radius: 2px 2px 0px 0px;
+}
+header > .gray-area > .category > a.active {
+  color: #ff4500;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+header > .blue-area > .configuration {
+  grid-area: user-menu;
+  background: #eff7ff;
+  font-size: 1.4vmin;
+  padding: 0.5vmin 0.7vmin;
+  border-top-left-radius: 1vmin;
+  border-top-right-radius: 1vmin;
+}
+header > .blue-area > .configuration > a {
+  text-decoration: none;
+}
+header > .blue-area > .configuration > a:not(.username):not(.message):hover {
+  text-decoration: underline;
+}
+header > .blue-area > .configuration > .username {
+  color: #3366b3;
+}
+header > .blue-area > .configuration > .preferences {
+  font-weight: 700;
+}
+
+/* ---SIDEBAR-LEFT */
+.sidebar-left {
+  grid-area: sidebar-left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background-color: #eff8ff;
+  font-family: Arial, sans-serif;
+  border-right: 1px solid #b0c4de;
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-links > a {
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  color: #000;
+  font-size: 10px;
+}
+
+.nav-links > a:hover {
+  background-color: #d0e4f2;
+}
+
+.nav-links > a.highlight {
+  color: #c00;
+  background-color: white;
+  font-weight: bold;
+  border: 1px solid #b0c4de;
+  border-right: none;
+}
+
+.more {
+  color: #5f99cf;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.box {
+  background: #dcedff;
+  margin-right: 1rem;
+}
+
+.box .title {
+  font-weight: bold;
+  color: #0079d3;
+  text-decoration: none;
+}
+
+.box p {
+  font-size: 12px;
+  color: #333;
+}
+
+.ad {
+  text-align: center;
+}
+
+.ad img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.ad p {
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.ad .small-text {
+  color: #666;
+  font-size: 10px;
+}
+
+/* ---MAIN */
+.feed {
+  grid-area: main;
+  background-color: white;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.entry {
+  border-bottom: 1px solid #ccc;
+  padding: 0.2rem 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.entry-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #369;
+  text-decoration: none;
+  margin: 0;
+}
+
+.entry-meta {
+  font-size: 12px;
+  color: #666;
+  margin: 0.2rem 0;
+}
+.source {
+  text-decoration: none;
+  color: gray;
+  font-size: 12px;
+}
+.post-user {
+  text-decoration: none;
+  color: #369;
+}
+.post-links button {
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* ---SIDEBAR-RIGHT */
+
+.comments {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr 9.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "post post"
+    "search search"
+    "post-comments post-comments";
+  grid-area: comments;
+}
+
+.post {
+  grid-area: post;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title"
+    "upvotes other-data";
+  grid-area: post;
+}
+.title {
+  grid-area: title;
+  background-color: yellow;
+}
+.upvotes {
+  grid-area: upvotes;
+  background-color: green;
+  display: flex;
+  gap: 0.5rem;
+  font-family: Arial, sans-serif;
+}
+.other-data {
+  grid-area: other-data;
+}
+/* ----UPVOTES */
+.total {
+  font-size: large;
+  font-weight: bold;
+}
+.total .num {
+  font-size: x-large;
+}
+.upvote {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  margin: 0;
+}
+.downvote {
+  grid-area: downvote;
+  font-size: 10px;
+  margin: 0;
+}

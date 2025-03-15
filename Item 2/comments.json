@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "user": "UserNumber42",
+    "score": 47,
+    "time": "21 hours ago",
+    "comment": "Wow, the first Reddit redesign I've seen that doesn't suck...",
+    "replies": [
+      {
+        "id": 2,
+        "user": "7hundredand77",
+        "score": 14,
+        "time": "20 hours ago",
+        "comment": "Ha, yea, since I know many people use widescreen monitors...",
+        "replies": [
+          {
+            "id": 3,
+            "user": "aliasforspam",
+            "score": 2,
+            "time": "15 hours ago",
+            "comment": "This looks like an email client. Brilliant!"
+          },
+          {
+            "id": 4,
+            "user": "Determenist",
+            "score": 4,
+            "time": "11 hours ago",
+            "comment": "It's funny that you mention email, because it looks so email-like..."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user": "evoke",
+        "score": 5,
+        "time": "19 hours ago",
+        "comment": "Except, let's be honest: I only rarely maximize windows..."
+      },
+      {
+        "id": 6,
+        "user": "guesthasb",
+        "score": 3,
+        "time": "3 hours ago",
+        "comment": "I agree. Additionally, it wouldn’t be difficult to provide a button..."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "user": "7hundredand77",
+    "score": 37,
+    "time": "9 hours ago",
+    "comment": "I am going to sleep for the night. There have been a lot of responses and feedback..."
+  }
+]
