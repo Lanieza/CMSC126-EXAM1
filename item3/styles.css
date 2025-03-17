@@ -1,84 +1,111 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f9f9f9;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+  padding: 2rem;
 }
 
-/* Header */
 header {
-    background: #ffcc00;
-    padding: 20px;
-    border-radius: 10px;
+  background: #ffcc00;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
 }
 
-/* Image Styling */
-.image-container {
-    text-align: center;
-    margin: 20px auto;
+.steps {
+  max-width: 90%;
+  width: 32rem;
+  margin: 2rem auto;
+  position: relative;
 }
 
-.image-container img {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Steps */
 .step {
-    background: #FFEC9E;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    display: none; /* Hide all steps by default */
+  background: #ffec9e;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1.25rem);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Show active step */
 :target {
-    display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-/* Accessibility: Make non-active steps hidden for screen readers */
-.step[aria-hidden="true"] {
-    display: none;
+.steps article:first-of-type {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-/* Navigation Links */
+.step:not(:target) {
+  display: none;
+}
+
+.step img {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
 nav {
-    margin-top: 20px;
+  margin-top: 1rem;
 }
 
-a {
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    background-color: #ffcc00;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+nav a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  background-color: #ffcc00;
+  color: black;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
 }
 
-a:hover {
-    background-color: #FFD580;
+nav a:hover,
+nav a:focus {
+  background-color: #ffd580;
+  outline: 0.125rem solid #ff6600;
 }
 
-a:focus {
-    outline: 3px solid #ff6600;
-    border: 2px solid black;
-    background-color: #FFD580;
+/* Pagination Links */
+.pagination {
+  margin-top: 1.5rem;
 }
 
-/* Focus visibility for navigation */
-nav:focus-within {
-    outline: 2px solid #ff6600;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #fff2cc;
-    transition: background-color 0.3s ease-in-out;
+.pagination a {
+  margin: 0.5rem;
+  padding: 0.625rem 1rem;
+  text-decoration: none;
+  background: #ffcc00;
+  color: black;
+  border-radius: 0.3125rem;
+  font-size: 0.875rem;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  background: #ffd580;
+  outline: 0.125rem solid #ff6600;
+}
+
+.restart-button {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  background: #ffcc00;
+  color: black;
+  border-radius: 0.3125rem;
+  font-size: 0.875rem;
+}
+
+.restart-button:hover {
+  background-color: #e65c00;
 }

@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banana Cake Recipe - Step 1</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <header role="banner">
-        <h1 tabindex="0">Banana Cake Recipe</h1>
-        <p tabindex="0">Banana cake or banana bread is a type of moist and sweet baked item made with mashed bananas either served with cream cheese icing, chocolate icing, or just plain unfrosted.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banana Cake Recipe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Banana Cake Recipe</h1>
+      <p>A delicious and moist banana cake perfect for any occasion.</p>
     </header>
 
-    <main id="main-content" role="main">
-        <section class="image-container">
-            <img src="images/step1.jpg" alt="Ingredients for banana cake including bananas, flour, sugar, eggs, butter, baking soda, and vanilla extract.">
-        </section>
+    <main>
+      <section class="steps">
+        <article id="step1" class="step">
+          <h2>Step 1: Gather Ingredients</h2>
+          <img src="images/step1.jpg" alt="Ingredients for banana cake" />
+          <p>
+            You'll need bananas, flour, sugar, eggs, butter, baking soda, and
+            vanilla extract.
+          </p>
+          <nav>
+            <a href="#step4">⬅ Last Step</a>
+            <a href="#step2">Next Step ➡</a>
+          </nav>
+        </article>
 
-        <section role="region" aria-labelledby="step1">
-            <h2 id="step1" tabindex="0">Step 1: Gather Ingredients</h2>
-            <p tabindex="0">You will need bananas, flour, sugar, eggs, butter, baking soda, and vanilla extract.</p>
-        </section>
+        <article id="step2" class="step">
+          <h2>Step 2: Mix the Ingredients</h2>
+          <img
+            src="images/step2.png"
+            alt="Mixing ingredients for banana cake"
+          />
+          <p>
+            Mash the bananas, then mix them with flour, sugar, eggs, butter,
+            baking soda, and vanilla extract.
+          </p>
+          <nav>
+            <a href="#step1">⬅ Previous Step</a>
+            <a href="#step3">Next Step ➡</a>
+          </nav>
+        </article>
 
-        <nav role="navigation">
-            <a href="index.html" class="prev" aria-label="Go to Step 1">⬅ Previous</a>
-            <a href="step2.html" class="next" aria-label="Go to Step 2">Next ➡</a>
-        </nav>
+        <article id="step3" class="step">
+          <h2>Step 3: Bake the Cake</h2>
+          <img
+            src="images/step3.png"
+            alt="Banana cake batter in a baking pan"
+          />
+          <p>
+            Pour the batter into a greased pan and bake at 180°C (350°F) for
+            about 40-45 minutes.
+          </p>
+          <nav>
+            <a href="#step2">⬅ Previous Step</a>
+            <a href="#step4">Next Step ➡</a>
+          </nav>
+        </article>
+
+        <article id="step4" class="step">
+          <h2>Step 4: Serve and Enjoy</h2>
+          <img src="images/step4.png" alt="Sliced banana cake ready to serve" />
+          <p>
+            Let the banana cake cool, then slice and enjoy with your favorite
+            drink!
+          </p>
+          <nav>
+            <a href="#step3">⬅ Previous Step</a>
+            <a href="#step1">Back to Start ➡</a>
+          </nav>
+        </article>
+      </section>
+
+      <nav class="pagination">
+        <a href="#step1">Step 1</a>
+        <a href="#step2">Step 2</a>
+        <a href="#step3">Step 3</a>
+        <a href="#step4">Step 4</a>
+      </nav>
+
+      <a href="#step1" class="restart-button"> 🔄 Restart </a>
     </main>
-
-</body>
+  </body>
 </html>
