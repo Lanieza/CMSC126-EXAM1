@@ -268,10 +268,14 @@ header > .blue-area > .configuration > .preferences {
   font-size: 12px;
   padding: 0.3rem 1rem;
 }
-
+.extra-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .box {
   background: #dcedff;
-  border: 3 solid #2774e2;
+  border: 1px solid #c0d1e9;
   margin-right: 1rem;
   padding: 0.2rem 0.5rem;
 }
@@ -298,7 +302,7 @@ header > .blue-area > .configuration > .preferences {
 
 .ad img {
   width: 100%;
-  border-radius: 5px;
+  margin-right: 2rem;
 }
 
 .ad p {
@@ -320,13 +324,28 @@ header > .blue-area > .configuration > .preferences {
 .entries {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .entry {
+  display: flex;
+  flex-direction: row;
   border-bottom: 1px solid #ccc;
   padding: 0.2rem 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  gap: 1.5rem;
+  color: #848383;
+  font-weight: lighter;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry:hover,
+#highlighted-post:hover {
+  background-color: rgb(226, 237, 247);
 }
 
 .entry-title {
@@ -338,10 +357,20 @@ header > .blue-area > .configuration > .preferences {
 }
 
 .entry-meta {
+  padding-top: 2px;
   font-size: 12px;
   color: #666;
   margin: 0.2rem 0;
 }
+
+#highlighted-post {
+  background-color: #fef3ef;
+}
+
+#highlighted-post > .entry-title {
+  color: #69398d;
+}
+
 .source {
   text-decoration: none;
   color: gray;
@@ -352,10 +381,11 @@ header > .blue-area > .configuration > .preferences {
   color: #369;
 }
 .post-links button {
+  font-size: small;
   background: none;
   border: none;
   color: gray;
-  font-size: 14px;
+  /* font-size: 14px; */
   cursor: pointer;
   font-weight: bold;
   padding: 0;
@@ -451,16 +481,24 @@ header > .blue-area > .configuration > .preferences {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  color: #848383;
+  gap: 0;
 }
 .other-data > p {
   margin: 0;
+  padding: 0;
+}
+.other-other-data > p {
+  margin: 0;
+  padding: 0;
 }
 .other-other-data {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1rem;
   font-weight: bold;
   margin: 0;
+  padding: 0;
 }
 /* ----UPVOTES */
 .total {
@@ -515,7 +553,7 @@ header > .blue-area > .configuration > .preferences {
 }
 
 .header-comment {
-  font-size: small;
+  font-size: smaller;
   display: flex;
   flex-direction: row;
   gap: 0.4rem;
@@ -523,7 +561,8 @@ header > .blue-area > .configuration > .preferences {
 }
 
 .comment-score {
-  font-size: small;
+  font-size: 12px;
+  color: #777;
   width: fit-content;
 }
 
@@ -535,11 +574,12 @@ header > .blue-area > .configuration > .preferences {
 
 .comment-user {
   font-weight: bold;
-  color: #2774e2;
-  font-size: small;
+  color: #5b87ac;
+  font-size: 12px;
 }
 
 .comment-time {
+  font-size: 12px;
   color: #777;
 }
 

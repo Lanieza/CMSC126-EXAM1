@@ -7,11 +7,26 @@ fetch("posts.json")
       const entry = document.createElement("div");
       entry.classList.add("entry");
 
+      // Assign an ID to the post with rank 2
+      if (post.rank === 2) {
+        entry.id = "highlighted-post"; // Set an ID
+      }
+
       entry.innerHTML = `
-                <a href="#" class="entry-title">${post.title}</a><a class="source" href="#"> (${post.source})</a>
-                <p class="entry-meta">submitted ${post.submitted} by <a href="#" class="post-user">${post.user}</a></p>
-                <div class="post-links"><button>${post.comments} comments</button> <button>share</button> <button>save</button> <button>hide</button> <button>report</button></div>
-            `;
+        <p>${post.rank}</p>
+        <div class="right">
+        <a href="#" class="entry-title">${post.title}</a>
+        <a class="source" href="#"> (${post.source})</a>
+        <p class="entry-meta">submitted ${post.submitted} by <a href="#" class="post-user">${post.user}</a></p>
+        <div class="post-links">
+          <button>${post.comments} comments</button>
+          <button>share</button>
+          <button>save</button>
+          <button>hide</button>
+          <button>report</button>
+        </div>
+        </div>
+      `;
 
       entriesDiv.appendChild(entry);
     });
