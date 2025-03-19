@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <header class ="header-text">
       <h1>Banana Cake Recipe</h1>
       <p>A delicious and moist banana cake perfect for any occasion.</p>
     </header>
 
-    <main>
-      <section class="steps">
-        <article id="step1" class="step">
-          <h2>Step 1: Gather Ingredients</h2>
+    <main role ="main">
+      <section class="steps" aria-live="polite" tabindex="0">
+        <article id="step1" class="step" aria-labelledby="step1-title">
+          <h2 id="step1-title">Step 1: Gather Ingredients</h2>
           <img src="images/step1.jpg" alt="Ingredients for banana cake" />
           <p>
             You'll need bananas, flour, sugar, eggs, butter, baking soda, and
             vanilla extract.
           </p>
-          <nav>
+          <nav role="navigation">
             <a href="#step4">⬅ Last Step</a>
             <a href="#step2">Next Step ➡</a>
           </nav>
         </article>
 
-        <article id="step2" class="step">
-          <h2>Step 2: Mix the Ingredients</h2>
+        <article id="step2" class="step" aria-labelledby="step2-title">
+          <h2 id="step2-title">Step 2: Mix the Ingredients</h2>
           <img
             src="images/step2.png"
             alt="Mixing ingredients for banana cake"
@@ -37,14 +37,14 @@
             Mash the bananas, then mix them with flour, sugar, eggs, butter,
             baking soda, and vanilla extract.
           </p>
-          <nav>
+          <nav role="navigation">
             <a href="#step1">⬅ Previous Step</a>
             <a href="#step3">Next Step ➡</a>
           </nav>
         </article>
 
-        <article id="step3" class="step">
-          <h2>Step 3: Bake the Cake</h2>
+        <article id="step3" class="step" aria-labelledby="step3-title">
+          <h2 id="step3-title">Step 3: Bake the Cake</h2>
           <img
             src="images/step3.png"
             alt="Banana cake batter in a baking pan"
@@ -53,20 +53,20 @@
             Pour the batter into a greased pan and bake at 180°C (350°F) for
             about 40-45 minutes.
           </p>
-          <nav>
+          <nav role="navigation">
             <a href="#step2">⬅ Previous Step</a>
             <a href="#step4">Next Step ➡</a>
           </nav>
         </article>
 
-        <article id="step4" class="step">
-          <h2>Step 4: Serve and Enjoy</h2>
+        <article id="step4" class="step" aria-labelledby="step4-title">
+          <h2 id="step4-title">Step 4: Serve and Enjoy</h2>
           <img src="images/step4.png" alt="Sliced banana cake ready to serve" />
           <p>
             Let the banana cake cool, then slice and enjoy with your favorite
             drink!
           </p>
-          <nav>
+          <nav role="navigation">
             <a href="#step3">⬅ Previous Step</a>
             <a href="#step1">Back to Start ➡</a>
           </nav>
@@ -80,7 +80,7 @@
         <a href="#step4">Step 4</a>
       </nav>
 
-      <a href="#step1" class="restart-button"> 🔄 Restart </a>
+      <button onclick="location.href='#step1'" class="restart-button"> 🔄 Restart </button>
     </main>
   </body>
 </html>

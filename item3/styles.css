@@ -2,13 +2,25 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   background: #f9f9f9;
-  padding: 2rem;
+  padding: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+header h1 {
+  margin-bottom: 0.5rem; 
+}
+
+header p {
+  margin-top: 0; 
 }
 
 header {
   background: #ffcc00;
-  padding: 1.5rem;
-  border-radius: 0.625rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
 }
 
 .steps {
@@ -22,11 +34,11 @@ header {
   background: #ffec9e;
   padding: 1.5rem;
   margin: 1.5rem 0;
-  border-radius: 0.625rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(1.25rem);
+  transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -47,12 +59,20 @@ header {
 }
 
 .step img {
+  display: block;  
+  margin: 0 auto;
   width: 100%;
   max-width: 25rem;
   height: auto;
-  border-radius: 0.625rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.step img:hover {
+  transform: scale(1.05);
 }
 
 nav {
@@ -61,51 +81,82 @@ nav {
 
 nav a {
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.2rem;
   text-decoration: none;
   background-color: #ffcc00;
   color: black;
   font-size: 1rem;
-  border-radius: 0.3125rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
 }
 
 nav a:hover,
 nav a:focus {
   background-color: #ffd580;
-  outline: 0.125rem solid #ff6600;
+  outline: 2px solid #ff6600;
+  transform: scale(1.1);
 }
 
-/* Pagination Links */
+nav a:focus-visible,
+.pagination a:focus-visible,
+.restart-button:focus-visible {
+  outline: 3px solid #ff6600;
+  box-shadow: 0 0 5px #ff6600;
+}
+
 .pagination {
   margin-top: 1.5rem;
 }
 
 .pagination a {
+  display: inline-block;
   margin: 0.5rem;
   padding: 0.625rem 1rem;
   text-decoration: none;
   background: #ffcc00;
   color: black;
-  border-radius: 0.3125rem;
+  border-radius: 5px;
   font-size: 0.875rem;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .pagination a:hover,
 .pagination a:focus {
   background: #ffd580;
-  outline: 0.125rem solid #ff6600;
+  outline: 2px solid #ff6600;
+  transform: scale(1.1);
 }
 
 .restart-button {
+  display: inline-block;
   margin: 1rem;
   padding: 0.8rem 1rem;
   text-decoration: none;
   background: #ffcc00;
   color: black;
-  border-radius: 0.3125rem;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .restart-button:hover {
-  background-color: #e65c00;
+  background-color: #ff8800;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .steps {
+    width: 95%;
+  }
+
+  nav a, .pagination a, .restart-button {
+    font-size: 0.875rem;
+    padding: 0.6rem 1rem;
+  }
 }
