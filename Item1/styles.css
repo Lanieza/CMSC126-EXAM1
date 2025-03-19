@@ -1,12 +1,13 @@
-/* General Reset */
-* {
+/* ==========================
+   Global Reset and Defaults
+   ========================== */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Layout */
 body {
     background-color: #f4f4f4;
     color: #333;
@@ -19,7 +20,9 @@ body {
     gap: 20px;
 }
 
-/* Header */
+/* ==========================
+   Header
+   ========================== */
 header {
     background-color: #004080;
     color: white;
@@ -41,13 +44,16 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #ffcc00;
 }
 
-/* Sidebar */
+/* ==========================
+   Sidebar
+   ========================== */
 .sidebar {
     flex: 1;
     background-color: white;
@@ -68,13 +74,16 @@ nav a:hover {
 .sidebar ul li a {
     text-decoration: none;
     color: #004080;
+    transition: color 0.3s;
 }
 
 .sidebar ul li a:hover {
     color: #ff6600;
 }
 
-/* News Section */
+/* ==========================
+   News Section
+   ========================== */
 .news-section {
     flex: 2;
     display: flex;
@@ -82,11 +91,13 @@ nav a:hover {
     gap: 20px;
 }
 
+/* Featured News */
 .featured-news-card {
     background-color: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
 .featured-news-card img {
@@ -114,13 +125,14 @@ nav a:hover {
     text-decoration: none;
     color: #004080;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .featured-news-card a:hover {
     color: #ff6600;
 }
 
-/* Newsfeed */
+/* General Newsfeed */
 .newsfeed {
     display: flex;
     gap: 20px;
@@ -132,7 +144,7 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 1;
-    transition: 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 .news-card:hover {
@@ -155,13 +167,16 @@ nav a:hover {
     font-weight: bold;
     display: inline-block;
     margin-top: 10px;
+    transition: color 0.3s;
 }
 
 .news-card a:hover {
     color: #ff6600;
 }
 
-/* Footer */
+/* ==========================
+   Footer
+   ========================== */
 footer {
     text-align: center;
     padding: 15px;
@@ -170,7 +185,9 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Design */
+/* ==========================
+   Responsive Design
+   ========================== */
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
