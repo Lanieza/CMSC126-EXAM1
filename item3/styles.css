@@ -1,20 +1,14 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: #f9f9f9;
+  background: #FFFBDA;
   padding: 1rem;
   color: #333;
   line-height: 1.6;
 }
 
-header h1 {
-  margin-bottom: 0.5rem; 
-}
-
-header p {
-  margin-top: 0; 
-}
-
+/* Header Styles */
 header {
   background: #ffcc00;
   padding: 0.5rem;
@@ -23,6 +17,15 @@ header {
   font-size: 1.2rem;
 }
 
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  margin-top: 0;
+}
+
+/* Steps Container */
 .steps {
   max-width: 90%;
   width: 32rem;
@@ -30,6 +33,7 @@ header {
   position: relative;
 }
 
+/* Individual Step Styles */
 .step {
   background: #ffec9e;
   padding: 1.5rem;
@@ -42,41 +46,48 @@ header {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+/* Show target step */
 :target {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
+/* Ensure first step is visible by default */
 .steps article:first-of-type {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
+/* Hide non-target steps */
 .step:not(:target) {
   display: none;
 }
 
+/* Step Image Styling */
 .step img {
-  display: block;  
+  display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 25rem;
+  max-width: 100rem;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
-  
 }
 
 .step img:hover {
   transform: scale(1.05);
 }
 
+/* Navigation Styles */
 nav {
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; 
 }
 
 nav a {
@@ -98,6 +109,7 @@ nav a:focus {
   transform: scale(1.1);
 }
 
+/* Focus styles for accessibility */
 nav a:focus-visible,
 .pagination a:focus-visible,
 .restart-button:focus-visible {
@@ -105,6 +117,7 @@ nav a:focus-visible,
   box-shadow: 0 0 5px #ff6600;
 }
 
+/* Pagination */
 .pagination {
   margin-top: 1.5rem;
 }
@@ -128,7 +141,18 @@ nav a:focus-visible,
   transform: scale(1.1);
 }
 
+.pagination a img {
+  width: 20px; /* Adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+/* Restart Button */
 .restart-button {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
   display: inline-block;
   margin: 1rem;
   padding: 0.8rem 1rem;
@@ -146,6 +170,7 @@ nav a:focus-visible,
   transform: scale(1.1);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
