@@ -18,32 +18,54 @@ fetch("posts.json")
   })
   .catch((error) => console.error("Error loading JSON:", error));
 
-fetch("comments.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const commentsSection = document.querySelector(".comments");
+document.addEventListener("DOMContentLoaded", async function () {
+  const commentsContainer = document.getElementById("comments-container");
 
-    function createCommentHTML(comment, isReply = false) {
-      const div = document.createElement("div");
-      div.classList.add("comment");
-      if (isReply) div.classList.add("reply");
+  try {
+    // Fetch comments.json
+    const response = await fetch("comments.json");
 
-      div.innerHTML = `
-                <strong>${comment.user}</strong> <span class="comment-score">(${comment.score} points - ${comment.time})</span>
-                <p>${comment.comment}</p>
-            `;
+    // Convert response to JSON
+    const commentsData = await response.json();
 
-      if (comment.replies) {
+    // Function to generate comment HTML
+    function generateCommentHTML(comment) {
+      let html = `
+        <div class="comment">
+        <div class="comment-body">
+        <div class="header-comment">
+          <span class="comment-user">${comment.user}</span>
+          <span class="comment-score">${comment.score} points</span>
+          <span class="comment-time">${comment.time}</span>
+          <a id="comment-h-link">[ - ]</a>
+        </div>
+            <p class="comment">${comment.comment}</p>
+            <div class="comment-actions">
+              <a href="#">permalink</a>
+              <a href="#">report</a>
+              <a href="#">reply</a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // If there are replies, recursively generate nested replies
+      if (comment.replies && comment.replies.length > 0) {
+        html += `<div class="replies">`;
         comment.replies.forEach((reply) => {
-          div.appendChild(createCommentHTML(reply, true));
+          html += generateCommentHTML(reply);
         });
+        html += `</div>`;
       }
 
-      return div;
+      return html;
     }
 
-    data.forEach((comment) => {
-      commentsSection.appendChild(createCommentHTML(comment));
+    // Generate and append comments
+    commentsData.forEach((comment) => {
+      commentsContainer.innerHTML += generateCommentHTML(comment);
     });
-  })
-  .catch((error) => console.error("Error loading JSON:", error));
+  } catch (error) {
+    console.error("Error fetching comments:", error);
+  }
+});

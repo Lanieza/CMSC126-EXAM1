@@ -10,21 +10,41 @@
     <div class="container">
       <header class="header">
         <div class="blue-area">
-          <div class="configuration">
-            <a href="#" class="username"> john_doe </a> (1)|
-            <a href="#" class="message"> <i class="fa fa-envelope-o"></i> </a>|
-            <a href="#" class="preferences"> preferences </a>|
-            <a href="#"> logout </a>
+          <img src="assets/logo-new.png" class="logo" />
+          <div class="user-wrap">
+            <div class="empty-space"></div>
+            <nav class="user-menu">
+              <a href="#" class="username"> 7hundredand77,</a> you're back!
+              <a href="#" class="preferences"> preferences </a>|
+              <a href="#"> logout? </a> :(
+            </nav>
           </div>
         </div>
         <div class="gray-area">
-          <nav class="category">
-            <a href="#" class="active">what's hot</a>
-            <a href="#">new</a>
-            <a href="#">controversial</a>
-            <a href="#">top</a>
-            <a href="#">saved</a>
-          </nav>
+          <div class="left"></div>
+          <div class="cat-wrap">
+            <nav class="category">
+              <a href="#" class="active">what's hot</a>
+              <a href="#">new</a>
+              <a href="#">controversial</a>
+              <a href="#">top</a>
+              <a href="#">saved</a>
+            </nav>
+          </div>
+          <div class="others">
+            <div class="search">
+              <input type="text" class="search-input" />
+              <button class="search-button"></button>
+            </div>
+            <nav class="other-stuff">
+              <button>
+                <span class="mail">✉</span><span class="num"> 1</span> New Msg
+              </button>
+              <button><span class="num">53,221</span> Link</button>
+              <button><span class="num">4,887</span> Comment</button>
+            </nav>
+          </div>
+          <div class="empty"></div>
         </div>
       </header>
 
@@ -51,7 +71,7 @@
 
         <section class="extra-section">
           <div class="box">
-            <a href="#" class="title">Submit a link</a>
+            <a href="#" class="ref">Submit a link</a>
             <p>
               to anything interesting: news article, blog entry, video,
               picture...
@@ -59,7 +79,7 @@
           </div>
 
           <div class="box">
-            <a href="#" class="title">Create Community</a>
+            <a href="#" class="ref">Create Community</a>
             <p>
               ...for your LARPing community.<br />...because nothing in life is
               free (except reddit!) here on the side
@@ -80,23 +100,41 @@
         </div>
       </main>
       <!-- Comments -->
-      <section class="comments">
+      <section class="comment-section">
         <section class="post">
-          <div class="title">IAM the guy who created this design AMA</div>
+          <div class="title">
+            <p>
+              IAM the guy who created this design AMA
+              <span class="source">(i.imgur.com)</span>
+            </p>
+            <a
+              class="source"
+              href="http://img3.imageshack.us/ing3/9807/goodlookingnew23.jpg"
+              >http://img3.imageshack.us/ing3/9807/goodlookingnew23.jpg</a
+            >
+          </div>
           <div class="upvotes">
+            <p>
+              <span id="number">232</span> points <span>(71 % like it)</span>
+            </p>
             <div class="total">
-              <p><span class="num">232</span> points</p>
-            </div>
-            <div>
-              <p class="upvote">390 up votes</p>
-              <p class="downvote">158 down votes</p>
+              <p id="up">390 upvotes</p>
+              <p id="down">158 down votes</p>
             </div>
           </div>
           <div class="other-data">
             <p>submitted on 01 Feb 2011</p>
-            <p>200 comments</p>
+            <div class="other-other-data">
+              <p>200 comments</p>
+              <p>sort by</p>
+            </div>
           </div>
         </section>
+        <section class="look">
+          <input type="text" />
+          <button>save</button>
+        </section>
+        <div id="comments-container"></div>
       </section>
     </div>
   </body>

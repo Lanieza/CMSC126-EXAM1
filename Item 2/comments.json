@@ -4,52 +4,62 @@
     "user": "UserNumber42",
     "score": 47,
     "time": "21 hours ago",
-    "comment": "Wow, the first Reddit redesign I've seen that doesn't suck...",
+    "comment": "Wow, the first Reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide screen monitors, this could be very cool.<br>Only suggestion is to have lover the width of the scores column for each post and the subreddit side bar so there is more room for the content.",
     "replies": [
       {
         "id": 2,
         "user": "7hundredand77",
         "score": 14,
         "time": "20 hours ago",
-        "comment": "Ha, yea, since I know many people use widescreen monitors...",
+        "comment": "Ha, yeah, since I know many people use widescreen monitors these days, this could make use of space a lot more effectively. A sweet spot with columns needs to be found where there is enough space to view everything perfectly. Since I just quickly put this one together, I didn't really spend much time finding that right balance.",
         "replies": [
           {
             "id": 3,
             "user": "aliasforspam",
             "score": 2,
             "time": "15 hours ago",
-            "comment": "This looks like an email client. Brilliant!"
+            "comment": "This looks like an email client. Brilliant!<br>...I never realized how much Reddit is like reading email until now. I guess we could view things in brackets much like forwards from the uncle you otherwise don't communicate with. DAE blah blah = FWD: FIND: Fwd: You gotta read this!",
+            "replies": [
+              {
+                "id": 4,
+                "user": "Deterministic",
+                "score": 4,
+                "time": "11 hours ago",
+                "comment": "Its funny that your mention email, because it looks ever-so-vaguely like<a>Google Wave</a>, except that instead of Menu|lnboxes|EmaiIs, it's Subreddits|Topics|Comments<br>Nevertheless, it's an interesting concept for a redesign - a bit shinier, but still maintaining the minimalistic design."
+              }
+            ]
           },
           {
-            "id": 4,
-            "user": "Determenist",
-            "score": 4,
-            "time": "11 hours ago",
-            "comment": "It's funny that you mention email, because it looks so email-like..."
+            "id": 5,
+            "user": "volve",
+            "score": 3,
+            "time": "10 hours ago",
+            "comment": "Except, lets be honest; I only rarely maximize windows on my 24' monitors, almost never for something like passive entertainment such as Reddit. I personally feel a lot of these 'wide-screen optimized' designs miss the point that they aren't likely the sole activity on said widescreen... (But it is a very nice design!)"
+          },
+          {
+            "id": 6,
+            "user": "freshwire",
+            "score": 2,
+            "time": "9 hours ago",
+            "comment": "You could have it that the column width can be changed (by just dragging it around)"
           }
         ]
       },
+
       {
-        "id": 5,
-        "user": "evoke",
-        "score": 5,
-        "time": "19 hours ago",
-        "comment": "Except, let's be honest: I only rarely maximize windows..."
-      },
-      {
-        "id": 6,
-        "user": "guesthasb",
+        "id": 7,
+        "user": "gusthebus",
         "score": 3,
-        "time": "3 hours ago",
-        "comment": "I agree. Additionally, it wouldn’t be difficult to provide a button..."
+        "time": "15 hours ago",
+        "comment": "I agree. Additionally, it wouldn’t be difficult to provide a button to toggle from the current layout, to the OP's design.<br>That would be a simple JavaScript to change out the page CSS. The dev team could take it one step farther and cache the user's UI choice."
       }
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "user": "7hundredand77",
-    "score": 37,
-    "time": "9 hours ago",
-    "comment": "I am going to sleep for the night. There have been a lot of responses and feedback..."
+    "score": 7,
+    "time": "14 hours ago*",
+    "comment": "I am going update the design tonight. There have been a lot of responses and feedback on what needs to be done: <ul><li>Orange Icon for new messages</li><li>A more reddit styled colour theme rather than white and grey</li><li>Update column widths</li><li>Allow dynamic sized story lengths</li></ul>"
   }
 ]
